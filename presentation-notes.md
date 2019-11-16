@@ -20,3 +20,15 @@ Previously, front-end just needed to work, does not have to be pretty
             <li>Brought JS to the scripting language it is today</li>
         </ul>
 </ul>
+
+<hr>
+
+# Code Workshop
+
+### Running a basic JS script
+``` javascript
+console.log("What's up my G"?);
+```
+
+#### Output
+[image](C:\Users\Imtiaz Raqib\Desktop\node_running_basic_js.PNG)
