@@ -44,9 +44,9 @@ const theFruit = "watermelon"               // using "const" - should not change
 function fruitColor(inputtedFruit) {
     let color;
 
-    if (inputtedFruit == 'banana') {
+    if (inputtedFruit === 'banana') {
         color = "yellow";
-    } else if (inputtedFruit == "grapes") {
+    } else if (inputtedFruit === "grapes") {
         color = "lime green"
     } else {
         color = "idk my G!"

@@ -18,3 +18,10 @@ A. `var` and `let` are both used for variable declaration in javascript but the 
 It can be said that a variable declared with `var` is **_defined throughout the program_** as compared to `let`.
 
 It is recommended to use `let` as it is less scope specific.
+
+**Q. What is the difference between loose and strict equality comparison?**
+
+A. `==` causes JS to convert values to basic primitive types of `true` or `false`.
+`console.log(0 == false);` will lead the output to spit out `true` because `0` is considered as `false` in JS. On the other hand, `console.log(1 == false);` will lead the output to spit out `true` because `1` is infact considered as `true` in JS
+
+`===` will do a proper comparison where the above console logs will render `false`.
