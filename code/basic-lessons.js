@@ -38,3 +38,23 @@ let someFruit = "grapes"                    // using "let" - introduced in 2014
 
 const theFruit = "watermelon"               // using "const" - should not change - also introduced in 2014
                                             //      > changing a const will lead to a TypeError
+
+// Conditional Statements
+function fruitColor(inputtedFruit) {
+    let color;
+
+    if (inputtedFruit == 'banana') {
+        color = "yellow";
+    } else if (inputtedFruit == "grapes") {
+        color = "lime green"
+    } else {
+        color = "idk my G!"
+    }
+
+    console.log("The color of " + inputtedFruit + " is " + color);
+}
+
+fruitColor(myFruit);
+fruitColor(someFruit);
+fruitColor("plum");
+
