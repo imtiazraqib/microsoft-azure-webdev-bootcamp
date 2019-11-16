@@ -89,3 +89,10 @@ generateGreeting(theFunction, "Imtiaz");
 (function () {
     console.log("enclosed function is running");
 }());
+
+(function () {
+    const myFnc = function (name) {
+        console.log("SAYING HELLO " + name)
+    }
+    myFnc("Imtiaz");
+}());
