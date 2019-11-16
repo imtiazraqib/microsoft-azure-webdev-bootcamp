@@ -61,3 +61,13 @@ function fruitColor(inputtedFruit) {
 fruitColor(myFruit);
 fruitColor(someFruit);
 fruitColor("plum");
+
+
+// Function expression prevents JS from hoisting it
+// It is stored as variable
+const theFunction = function (someName) {
+    // this function is only available after the point of assignment is made
+    console.log("Waddup " + someName);
+}
+
+theFunction("Imtiaz");
