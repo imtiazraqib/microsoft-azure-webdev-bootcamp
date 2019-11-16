@@ -58,6 +58,20 @@ const restartGame = function () {
     const labelText = inputLabel.textContent; 
     const updateLabeltext = labelText.replace("{x}", min).replace("{y}", max);
     inputLabel.textContent = updateLabeltext;
+
+    const topBar = document.querySelector(".feedback-divider:first-child");
+    const btmBar = document.querySelector(".feedback-divider:last-child");
+    const statusText = document.querySelector(".feedback-text .status");
+    const attemptsText = document.querySelector(".attempts");
+    let feedbackText;
+
+    // removing all the intiial styling classes
+    topBar.classList.add("hide");
+    btmBar.classList.add("hide");
+    statusText.classList.add("hide");
+    attemptsText.classList.add("hide");
+
+
 }
 
 const updateUIwithStatus = function (status) {
@@ -66,14 +80,15 @@ const updateUIwithStatus = function (status) {
     const btmBar = document.querySelector(".feedback-divider:last-child");
     const statusText = document.querySelector(".feedback-text .status");
     const attemptsText = document.querySelector(".attempts");
-
     let feedbackText;
 
+    // removing all the intiial styling classes
     topBar.classList.remove("hide", "win", "lose");
     btmBar.classList.remove("hide", "win", "lose");
     statusText.classList.remove("hide", "win", "lose");
     attemptsText.classList.remove("hide");
 
+    // only adding the required classes based on the right status
     topBar.classList.add(status);
     btmBar.classList.add(status);
     statusText.classList.add(status);
@@ -85,6 +100,7 @@ const updateUIwithStatus = function (status) {
     // This update will work only once because, after the first update, {x} is no more
     // attemptsText.textContent = attemptsText.textContent.replace("{x}", window.attempts);
 
+    // Displaying the feedback text between topBar and btmBar
     if (status === "win") {
         feedbackText = "You win!";
     } else if (status === "lose") {
