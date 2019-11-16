@@ -26,9 +26,5 @@ Previously, front-end just needed to work, does not have to be pretty
 # Code Workshop
 
 ### Running a basic JS script
-``` javascript
-console.log("What's up my G"?);
-```
-
-#### Output
-![image](C:\Users\Imtiaz Raqib\Desktop\node_running_basic_js.PNG)
+Have node installed in your environment and run `node [script-name].js` in the terminal
+It will output the result in the terminal
