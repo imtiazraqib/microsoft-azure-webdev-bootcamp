@@ -28,10 +28,17 @@ const submitNumber = function (event) {
     const userInput = Number(document.getElementById('numberTextInput').value);
     // if the user does not enter a number, the number conversion of a non-number
     // returns NaN - Not a Number
+    window.attempts += 1;
 
     if (Number.isNaN(userInput)) {
         window.alert("Please enter a number only!");
         return;
+    }
+
+    if (userInput === window.randomNumber) {
+        console.log("You got it!");
+    } else {
+        console.log("Try again");
     }
 }
 
@@ -52,6 +59,8 @@ const restartGame = function (event) {
     const updateLabeltext = labelText.replace("{x}", min).replace("{y}", max);
     inputLabel.textContent = updateLabeltext;
 }
+
+
 
 document.querySelector("#taskForm").addEventListener("submit", submitNumber);
 document.querySelector("#taskForm").addEventListener("reset", restartGame)
