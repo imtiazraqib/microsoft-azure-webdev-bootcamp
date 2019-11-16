@@ -18,3 +18,11 @@ console.log(myNumber + ' is my Number');    // This works as well
 
 var myName = 'Imtiaz'
 console.log(myName + ' is Batman and his favorite number is ' + myNumber);
+
+// Creating a function
+
+function greetings(name) {                  // takes a parameter
+    console.log("Good morning " + name + ", and if I do not see you, good afternoon, good evening and good night.");
+}
+
+greetings(myName);                          // calling the fucntion with the variable
