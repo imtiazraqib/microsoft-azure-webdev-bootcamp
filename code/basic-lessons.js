@@ -1,6 +1,6 @@
 console.log("What's up my G?");
 console.log("I am doing well, and you?");
-console.log("Alright Alright Alright");
+console.log("Alright Alright Alright\n");
 
 // JavaScript is a loose typed language
 
@@ -17,7 +17,7 @@ console.log(myNumber + ' is my Number');    // This works as well
 
 
 var myName = 'Imtiaz'
-console.log(myName + ' is Batman and his favorite number is ' + myNumber);
+console.log(myName + ' is Batman and his favorite number is ' + myNumber + "\n");
 
 // Creating a function
 
@@ -34,6 +34,7 @@ greetings("Ronaldo from Portugal");         // calling the fucntion with the str
 
 // Creating Variables
 var myFruit = "banana"                      // Using "var"
-let someFruit = "grapes"                    // using "let"
-const theFruit = "watermelon"               // using "const" - should not change
+let someFruit = "grapes"                    // using "let" - introduced in 2014
+
+const theFruit = "watermelon"               // using "const" - should not change - also introduced in 2014
                                             //      > changing a const will lead to a TypeError
