@@ -16,3 +16,5 @@ A. It is done through hoisting.
 
 A. `var` and `let` are both used for variable declaration in javascript but the difference between them is that `var` is *function scoped* and `let` is *block scoped*.
 It can be said that a variable declared with `var` is **_defined throughout the program_** as compared to `let`.
+
+It is recommended to use `let` as it is less scope specific.
