@@ -73,8 +73,19 @@ const greet = theFunction("Imtiaz");
 console.log("Good day and " + greet + "?\n");
 
 // Passing a function into another function
+// generateGreeting is going to take a function morningGreet
+// and run it using inputName as the parameter
 const generateGreeting = function (morningGreet, inputName) {
     const greetings = morningGreet(inputName);
     console.log("Hello, welcome and " + greetings);
 }
 generateGreeting(theFunction, "Imtiaz");
+
+// Calling a function immediately on the spot
+// This is a common practice to avoid polluting the global namespace
+// In a company, multiple scripts may have the same variables
+// This encapsulates a block of code
+// This is called Immediately Invoked Function Expression (IIFE)
+(function () {
+    console.log("enclosed function is running");
+}());
