@@ -36,13 +36,13 @@ const submitNumber = function (event) {
     }
 
     if (userInput === window.randomNumber) {
-        console.log("You got it!");
+        updateUIwithStatus("win");
     } else {
-        console.log("Try again");
+        updateUIwithStatus("lose");
     }
 }
 
-const restartGame = function (event) {
+const restartGame = function () {
     const min = 1;
     const max = 20;
 
@@ -60,7 +60,33 @@ const restartGame = function (event) {
     inputLabel.textContent = updateLabeltext;
 }
 
+const updateUIwithStatus = function (status) {
+    // status will either be "win" or "lose"
+    const topBar = document.querySelector(".feedback-divider:first-child");
+    const btmBar = document.querySelector(".feedback-divider:last-child");
+    const statusText = document.querySelector(".feedback-text .status");
+    const attemptsText = document.querySelector(".attempts");
 
+    let feedbackText;
+
+    topBar.classList.remove("hide", "win", "lose");
+    btmBar.classList.remove("hide", "win", "lose");
+    statusText.classList.remove("hide", "win", "lose");
+    attemptsText.classList.remove("hide");
+
+    topBar.classList.add(status);
+    btmBar.classList.add(status);
+    statusText.classList.add(status);
+
+    attemptsText.textContent = attemptsText.textContent.replace("{x}", window.attempts);
+
+    if (status === "win") {
+        feedbackText = "You win!";
+    } else if (status === "lose") {
+        feedbackText = "You lost."
+    }
+    statusText.textContent = feedbackText;
+}
 
 document.querySelector("#taskForm").addEventListener("submit", submitNumber);
 document.querySelector("#taskForm").addEventListener("reset", restartGame)
