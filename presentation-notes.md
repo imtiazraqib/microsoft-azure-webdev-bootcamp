@@ -31,4 +31,4 @@ console.log("What's up my G"?);
 ```
 
 #### Output
-[image](C:\Users\Imtiaz Raqib\Desktop\node_running_basic_js.PNG)
+![image](C:\Users\Imtiaz Raqib\Desktop\node_running_basic_js.PNG)
