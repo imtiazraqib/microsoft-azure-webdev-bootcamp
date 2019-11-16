@@ -1,6 +1,6 @@
 console.log("What's up my G?");
 console.log("I am doing well, and you?");
-console.log("Alright Alright Alright\n");
+console.log("Alright Alright Alright\n");   // "\n" adds a newline character
 
 // JavaScript is a loose typed language
 
