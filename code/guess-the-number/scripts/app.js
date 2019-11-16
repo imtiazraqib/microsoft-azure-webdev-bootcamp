@@ -78,7 +78,12 @@ const updateUIwithStatus = function (status) {
     btmBar.classList.add(status);
     statusText.classList.add(status);
 
-    attemptsText.textContent = attemptsText.textContent.replace("{x}", window.attempts);
+    // Updating it using JS object literal notation and a ternary operator for saying 1 time vs 2 times
+    const attemptsTextUpdate = `You tried ${window.attempts} time${window.attempts === 1 ? "" : "s"}.`
+    attemptsText.textContent = attemptsTextUpdate;
+
+    // This update will work only once because, after the first update, {x} is no more
+    // attemptsText.textContent = attemptsText.textContent.replace("{x}", window.attempts);
 
     if (status === "win") {
         feedbackText = "You win!";
