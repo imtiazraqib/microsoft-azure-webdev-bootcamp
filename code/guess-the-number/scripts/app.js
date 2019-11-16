@@ -44,7 +44,13 @@ const restartGame = function (event) {
 
     // reset the counter
     window.attempts = 0;
-        
+
+    // Updating the number for min and max using JS
+    // Changing DOM elements using JS
+    const inputLabel = document.querySelector("span.input-label");
+    const labelText = inputLabel.textContent; 
+    const updateLabeltext = labelText.replace("{x}", min).replace("{y}", max);
+    inputLabel.textContent = updateLabeltext;
 }
 
 document.querySelector("#taskForm").addEventListener("submit", submitNumber);
