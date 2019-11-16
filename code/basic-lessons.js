@@ -49,7 +49,7 @@ function fruitColor(inputtedFruit) {
     } else if (inputtedFruit === "grapes") {
         color = "lime green"
     } else {
-        color = "idk my G!"
+        color = "idk my G!\n"
         let errorLet = "This is an error through 'let'"    // let is only defined in this else block and is lost once it is outside
         var errorVar = "This is an error through 'var'"    // var will not be lost and still can be accessed outside the else block
     }
@@ -67,7 +67,14 @@ fruitColor("plum");
 // It is stored as variable
 const theFunction = function (someName) {
     // this function is only available after the point of assignment is made
-    console.log("Waddup " + someName);
+    return "Waddup " + someName;
 }
+const greet = theFunction("Imtiaz");
+console.log("Good day and " + greet + "?\n");
 
-theFunction("Imtiaz");
+// Passing a function into another function
+const generateGreeting = function (morningGreet, inputName) {
+    const greetings = morningGreet(inputName);
+    console.log("Hello, welcome and " + greetings);
+}
+generateGreeting(theFunction, "Imtiaz");
