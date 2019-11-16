@@ -22,10 +22,6 @@ Previously, front-end just needed to work, does not have to be pretty
 </ul>
 
 <hr>
-## Interview Question Tips
-Q. What happens if I call a variable before assigning it?
-A. The output will be `undefined`, because it is not declared yet
-<hr>
 
 # Code Workshop
 
