@@ -1,19 +1,28 @@
 /*
-    1. Asthe page loads, we need to "wire-up" the buttons
+    1. As the page loads, we need to "wire-up" the buttons
     2. Also, prepare a random number as the game starts
     3. As the user sumbits their answer
         - We will take the input value and compare it against our random numnber
         - if the number matches, we show that the user won
         - if the number does not match, we show that the user needs to try it again
     4. If the user does submit an invalid query, warn the user the input is invalid
+    5. Record and keep count of their attempts
+    6. If the user clicks the restart button:
+        - clear off all visuals
+        - reset the counter for the number attempts
+        - clear off previous inputs
+
+    Changing the game visuals
+        - point to the elements and remove the hide class
+        - change the classes of the elements between "win" and "stuff"
 */
 
-const sumbitButtom = document.quer
+document.querySelector("#taskForm").addEventListener("submit", function() {
+    let userInput = document.getElementById('numberTextInput').value;
+    window.alert(userInput);
+});
 
-function getUserInput() {
-    let userInput = document.getElementById('numberTextInput').nodeValue;
-    return userInput;
-}
+
 
 
 
