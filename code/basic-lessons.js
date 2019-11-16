@@ -26,3 +26,5 @@ function greetings(name) {                  // takes a parameter
 }
 
 greetings(myName);                          // calling the fucntion with the variable
+greetings("Messi");                          // calling the fucntion with the variable
+greetings("Ronaldo");                          // calling the fucntion with the variable
