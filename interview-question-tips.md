@@ -11,3 +11,8 @@ A. It is done through hoisting.
 <li>JS takes a quick scan and checks if there is anything special that is important. It attributes an **function declaration** as important and moves it to the top (hoist to the top)</li>
 <li>However, **variables** declared are remembered at the same line and ARE NOT hoisted</li>
 </ul>
+
+**Q. What is the difference between `var` and `let`?**
+
+A. `var` and `let` are both used for variable declaration in javascript but the difference between them is that `var` is *function scoped* and `let` is *block scoped*.
+It can be said that a variable declared with `var` is **_defined throughout the program_** as compared to `let`.

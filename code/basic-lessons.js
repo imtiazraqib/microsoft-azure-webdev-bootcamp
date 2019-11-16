@@ -38,6 +38,7 @@ let someFruit = "grapes"                    // using "let" - introduced in 2014
 
 const theFruit = "watermelon"               // using "const" - should not change - also introduced in 2014
                                             //      > changing a const will lead to a TypeError
+                                            //      > it should also have a initial value
 
 // Conditional Statements
 function fruitColor(inputtedFruit) {
@@ -49,9 +50,12 @@ function fruitColor(inputtedFruit) {
         color = "lime green"
     } else {
         color = "idk my G!"
+        let errorLet = "This is an error through 'let'"    // let is only defined in this else block and is lost once it is outside
+        var errorVar = "This is an error through 'var'"    // var will not be lost and still can be accessed outside the else block
     }
 
     console.log("The color of " + inputtedFruit + " is " + color);
+    // console.log(errorVar)
 }
 
 fruitColor(myFruit);
