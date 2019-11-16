@@ -27,7 +27,13 @@ function greetings(name) {                  // takes a parameter
 
 greetings(myName);                          // calling the fucntion with the variable
 greetings("Messi");                         // calling the fucntion with the string itself
-greetings("Ronaldo from Portugal");                       // calling the fucntion with the string in a sentence
+greetings("Ronaldo from Portugal");         // calling the fucntion with the string in a sentence
 
 // camelCase examples: fetchUserDetails, updateDB
 // reserved JS Objects: Array, Object, Number, String, Class
+
+// Creating Variables
+var myFruit = "banana"                      // Using "var"
+let someFruit = "grapes"                    // using "let"
+const theFruit = "watermelon"               // using "const" - should not change
+                                            //      > changing a const will lead to a TypeError
