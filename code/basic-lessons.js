@@ -61,4 +61,3 @@ function fruitColor(inputtedFruit) {
 fruitColor(myFruit);
 fruitColor(someFruit);
 fruitColor("plum");
-
