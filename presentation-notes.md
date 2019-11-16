@@ -22,9 +22,15 @@ Previously, front-end just needed to work, does not have to be pretty
 </ul>
 
 <hr>
+## Interview Question Tips
+Q. What happens if I call a variable before assigning it?
+A. The output will be `undefined`, because it is not declared yet
+<hr>
 
 # Code Workshop
 
 ### Running a basic JS script
 Have node installed in your environment and run `node [script-name].js` in the terminal
 It will output the result in the terminal
+
+
