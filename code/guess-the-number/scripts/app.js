@@ -17,10 +17,15 @@
         - change the classes of the elements between "win" and "stuff"
 */
 
-document.querySelector("#taskForm").addEventListener("submit", function() {
-    let userInput = document.getElementById('numberTextInput').value;
-    window.alert(userInput);
-});
+const submitNumber = function (event) {
+    event.preventDefault();     // prevents the screen from refreshing and only listens
+                                // if submit is hit again.
+
+    const userInput = document.getElementById('numberTextInput').value;
+    console.log(userInput);
+}
+
+document.querySelector("#taskForm").addEventListener("submit", submitNumber);
 
 
 
