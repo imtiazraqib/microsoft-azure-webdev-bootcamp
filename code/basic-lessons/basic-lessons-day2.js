@@ -22,3 +22,21 @@ const anotherObject = {
 
 console.log(anotherObject.showName());
 console.log(anotherObject['web' + (100 + 2)]);
+
+/* How we can use dynamic property calling in 
+real life scenarios
+
+const accounts = {
+    "imtiazraqib@gmail.com" : {
+        name: "Imtiaz",
+        activeUser: true,
+    },
+
+    "noemail@email.com": {
+        name: "Noname",
+        activeUser: false,
+    }
+}
+
+return accounts[authorizedUserEmail];
+*/
