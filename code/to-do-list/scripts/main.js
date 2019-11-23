@@ -1,20 +1,4 @@
-window.tasks = [
-    {
-        description: "This is the first task",
-        done: false,
-        id: 1
-    },
-    {
-        description: "This is the second task",
-        done: false,
-        id: 2
-    },
-    {
-        description: "This is the third task",
-        done: true,
-        id: 3
-    }
-];
+window.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function displayTaskswithHTML() {
     const listElement = document.querySelector(".bottom-row ul");
@@ -53,6 +37,9 @@ function bindTaskButtonActions() {
                     return true;
                 }
             });
+
+            const taskJSONstring = JSON.stringify(window.tasks);
+            localStorage.setItem('tasks', taskJSONstring);
             
         });
 
@@ -63,6 +50,9 @@ function bindTaskButtonActions() {
            const id = Number(taskElement.dataset.id);
            window.tasks = window.tasks.filter((item) => item.id != id);
            displayTaskswithHTML();
+
+           const taskJSONstring = JSON.stringify(window.tasks);
+           localStorage.setItem('tasks', taskJSONstring);
         });
     });
 }
@@ -85,8 +75,11 @@ function submitTaskForm(event) {
     window.tasks.push(taskObject);
     inputTaskField.value = "";
     displayTaskswithHTML();
-    
 
+    const taskJSONstring = JSON.stringify(window.tasks);
+    localStorage.setItem('tasks', taskJSONstring);
+
+    
 }
 
 displayTaskswithHTML();
