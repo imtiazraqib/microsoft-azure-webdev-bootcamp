@@ -46,8 +46,13 @@ function bindTaskButtonActions() {
             
         });
 
-        deleteButton.addEventListener('click', () => {
-           
+        deleteButton.addEventListener('click', (event) => {
+           const taskElement = event.currentTarget.parentNode;
+           // dataset is what HTML returns back to JS
+           // console.log('taskItem ID:', taskElement.dataset.id);
+           const id = Number(taskElement.dataset.id);
+           window.tasks = window.tasks.filter((item) => item.id != id);
+           displayTaskswithHTML();
         });
     });
 
