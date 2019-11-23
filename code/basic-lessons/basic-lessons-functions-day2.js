@@ -28,10 +28,10 @@ const displayValue = (values) => console.log(value);
 
 // Complex example of benefits of arrow function
 // log is another function within this function
-const logAndCalculateSum = (log, x, y, z) => {
-    log(x);
-    log(y);
-    log(z);
+const logAndCalculateSum = (imti, x, y, z) => {
+    imti(x);
+    imti(y);
+    imti(z);
 
     return x+y+z;
 };

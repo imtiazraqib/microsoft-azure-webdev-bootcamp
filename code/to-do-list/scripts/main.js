@@ -1,21 +1,17 @@
-let taskArray = localStorage.getItem("tasks") ? JSON.parse(localStorage.getItem("tasks")) : []
-
-// retrieving the user inputted task
-const submitTask = function (event) {
-    event.preventDefault();
-
-    const userInput = document.getElementById("taskTextInput").value;
-    if (!taskTextInput.value) {
-        window.alert('Please enter a task');
-        return;
+window.tasks = [
+    {
+        description: "This is the first task",
+        done: false,
+        id: 1
+    },
+    {
+        description: "This is the second task",
+        done: false,
+        id: 2
+    },
+    {
+        description: "This is the third task",
+        done: false,
+        id: 3
     }
-
-    taskArray.push(userInput);
-    console.log(taskArray);
-}
-
-const updateUIwithTask = function () {
-
-}
-
-document.querySelector("#taskForm").addEventListener("submit", submitTask);
+]
