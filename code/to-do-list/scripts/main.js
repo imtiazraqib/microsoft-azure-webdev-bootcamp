@@ -23,8 +23,10 @@ function displayTaskswithHTML() {
     window.tasks.forEach((item) => {
         listElement.innerHTML += `
         <li>
-            <span>${item}</span>
+            <span>${item.description}</span>
         </li>
         `;
     });
 }
+
+displayTaskswithHTML();
