@@ -43,6 +43,16 @@ function bindTaskButtonActions() {
         // addEventListener takes an "event-type" and then a function
         // to do something
         markAsDoneButton.addEventListener('click', () => {
+            const taskElement = event.currentTarget.parentNode;
+            const id = Number(taskElement.dataset.id);
+
+            window.tasks.find((item) => {
+                if (item.id === id) {
+                    taskElement.classList.add('done');
+                    item.done = true;
+                    return true;
+                }
+            });
             
         });
 
