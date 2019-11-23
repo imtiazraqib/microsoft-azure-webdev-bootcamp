@@ -6,10 +6,19 @@ console.log("My name is", name, secondName);
 // Creating objects
 
 const myObject = {};
-myObject.name = "Imtiaz";                       // Creating a key "name" with its value
+myObject.name = "Imtiaz";                       // Creating a property "name" with its value
 console.log(myObject);
 
 
 const anotherObject = {
-    name: "Imtiaz",                             // Creating a key "name" with its value explicitly
+    name: "oImtiaz",                             // Creating a property "name" with its value explicitly
+
+    showName: function () {                     // Creating a property function "showName"
+        console.log(this.name);
+    },
+
+    web102: "November JS Workshop"
 }
+
+console.log(anotherObject.showName());
+console.log(anotherObject['web' + (100 + 2)]);
