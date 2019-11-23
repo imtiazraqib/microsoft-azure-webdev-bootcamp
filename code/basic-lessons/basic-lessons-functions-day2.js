@@ -34,8 +34,27 @@ const logAndCalculateSum = (log, x, y, z) => {
     log(z);
 
     return x+y+z;
-}
+};
 // declaring the log function when calling logAndCalculateSum function
 const sum = logAndCalculateSum((value) => console.log("value is", value), 2, 4, 8);
 console.log("The sum is", sum);
 
+const fruits = ["apple", "banana", "berry"];
+
+// map goes through the array and builds a new array with the new values
+// fruitName is the indexed value of the fruits array
+const sentences = fruits.map((fruitName) => "The fruit you eat is " + fruitName);
+console.log(sentences);
+
+// Shortens codes as well
+
+const work = () => (x) => console.log(x)
+/*
+Same as writing
+
+const work = function () {
+    return function (x) {
+        console.log(x);
+    }
+}
+*/
