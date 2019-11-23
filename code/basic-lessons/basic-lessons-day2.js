@@ -1,5 +1,5 @@
 // To add strings, we can just put a comma instead of the plus sign
-let name = "Imtiaz"
+let name = "Imtiaish"
 let secondName = "Vanessa"
 console.log("My name is", name, secondName);
 
@@ -40,3 +40,11 @@ const accounts = {
 
 return accounts[authorizedUserEmail];
 */
+
+// Arrays in JS
+const myListOfNames = ["Kingston", "Vaish", "Vanessa", "Imtiaz"];
+console.log(myListOfNames[1]);
+console.log(myListOfNames.length);              // Getting the length of the array
+
+console.log("The last entry in my list is",     
+myListOfNames[myListOfNames.length-1]);         // Getting the last entry in the array
