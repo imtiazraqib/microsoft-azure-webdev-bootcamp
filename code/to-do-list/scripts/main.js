@@ -14,4 +14,17 @@ window.tasks = [
         done: false,
         id: 3
     }
-]
+];
+
+function displayTaskswithHTML() {
+    const listElement = document.querySelector(".bottom-row ul");
+    listElement.innerHTML = "";
+
+    window.tasks.forEach((item) => {
+        listElement.innerHTML += `
+        <li>
+            <span>${item}</span>
+        </li>
+        `;
+    });
+}

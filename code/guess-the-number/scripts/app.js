@@ -34,7 +34,7 @@ const submitNumber = function (event) {
         window.alert("Please enter a number only!");
         return;
     }
-    
+
     if (userInput < window.randomNumber) {
         window.GuessedNumberState = -1;
     } else if (userInput > window.randomNumber) {
@@ -105,12 +105,14 @@ const updateUIwithStatus = function (status) {
 
     // Updating it using JS object literal notation and a ternary operator for saying 1 time vs 2 times
     if (window.GuessedNumberState === -1) {
-        higherOrLowerText = "The number is higher";
+        higherOrLowerText = "The number is higher.";
     } else if (window.GuessedNumberState === 1) {
-        higherOrLowerText = "The number is lower";
+        higherOrLowerText = "The number is lower.";
+    } else {
+        higherOrLowerText = "You got it!"
     }
     
-    let attemptsTextUpdate = `${higherOrLowerText}. You tried ${window.attempts} time${window.attempts === 1 ? "" : "s"}.`
+    let attemptsTextUpdate = `${higherOrLowerText} You tried ${window.attempts} time${window.attempts === 1 ? "" : "s"}.`
     attemptsText.textContent = attemptsTextUpdate;
 
     // This update will work only once because, after the first update, {x} is no more
