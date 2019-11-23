@@ -42,7 +42,7 @@ function bindTaskButtonActions() {
 
         // addEventListener takes an "event-type" and then a function
         // to do something
-        markAsDoneButton.addEventListener('click', () => {
+        markAsDoneButton.addEventListener('click', (event) => {
             const taskElement = event.currentTarget.parentNode;
             const id = Number(taskElement.dataset.id);
 
@@ -65,8 +65,29 @@ function bindTaskButtonActions() {
            displayTaskswithHTML();
         });
     });
+}
 
+function submitTaskForm(event) {
+    event.preventDefault();
     
+    let inputTaskField = document.querySelector("#taskTextInput");
+    let userInputTask = document.querySelector("#taskTextInput").value;
+    if (!userInputTask) {
+        window.alert("Please enter a task");
+    }
+
+    const taskObject = {
+        description: userInputTask,
+        done: false,
+        id: Date.now()
+    };
+
+    window.tasks.push(taskObject);
+    inputTaskField.value = "";
+    displayTaskswithHTML();
+    
+
 }
 
 displayTaskswithHTML();
+document.querySelector("#taskForm").addEventListener('submit', submitTaskForm);
