@@ -46,5 +46,11 @@ const myListOfNames = ["Kingston", "Vaish", "Vanessa", "Imtiaz"];
 console.log(myListOfNames[1]);
 console.log(myListOfNames.length);              // Getting the length of the array
 
-console.log("The last entry in my list is",     
-myListOfNames[myListOfNames.length-1]);         // Getting the last entry in the array
+console.log("\nThe last entry in my list is",     
+myListOfNames[myListOfNames.length-1], "\n");         // Getting the last entry in the array
+
+// Loops in JS Arrays
+
+for (let i = 0; i < myListOfNames.length; i++) {
+    console.log(myListOfNames[i]);
+}
