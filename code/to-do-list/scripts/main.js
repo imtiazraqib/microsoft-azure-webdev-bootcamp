@@ -11,7 +11,7 @@ window.tasks = [
     },
     {
         description: "This is the third task",
-        done: false,
+        done: true,
         id: 3
     }
 ];
@@ -22,11 +22,36 @@ function displayTaskswithHTML() {
 
     window.tasks.forEach((item) => {
         listElement.innerHTML += `
-        <li>
+        <li data-id="${item.id}" class="task-item ${item.done ? 'done' : ''}">
             <span>${item.description}</span>
+            <button class="matter-button-contained">Mark as Done</button>
+            <button class="matter-button-contained matter-secondary">Delete</button>
         </li>
         `;
     });
+
+    bindTaskButtonActions();
+}
+
+function bindTaskButtonActions() {
+    // Selects all the elements with class task-item and looping
+    // through them as querSelectorAll returns an array
+    document.querySelectorAll(".task-item").forEach((taskElement) => {
+        const markAsDoneButton = taskElement.querySelectorAll("button")[0];
+        const deleteButton = taskElement.querySelectorAll("button")[1];
+
+        // addEventListener takes an "event-type" and then a function
+        // to do something
+        markAsDoneButton.addEventListener('click', () => {
+            
+        });
+
+        deleteButton.addEventListener('click', () => {
+           
+        });
+    });
+
+    
 }
 
 displayTaskswithHTML();
